@@ -47,7 +47,6 @@ app.post('/phones', async (req, res) => {
 app.delete('/phones/:id', async (req, res) => {
     try {
         await db.query(`DELETE FROM phones WHERE 'Id' = ${req.params.id}`)
-
     } catch (err) {
         throw err
     }
